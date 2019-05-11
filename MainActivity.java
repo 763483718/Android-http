@@ -71,10 +71,11 @@ public class MainActivity extends AppCompatActivity {
         test_GET.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                httpTool = new HttpTool(HttpTool.MODE_GET, "http://129.211.28.150:8443/api/getRouteList", MESS_WHAT_TEST_GET, handler);
+                httpTool = new HttpTool(HttpTool.MODE_GET, "http://129.211.28.150:8443/api/getStopPosition", MESS_WHAT_TEST_GET, handler);
 
                 httpTool.clearData();
-//                httpTool.addData("","");如果有数据要传的话
+                httpTool.addData("lat","30.22");
+                httpTool.addData("lng","120.03");
 
                 httpTool.start();
             }
