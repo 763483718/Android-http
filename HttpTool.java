@@ -139,7 +139,7 @@ public class HttpTool extends Thread {
     @Override
     public void run() {
         try {
-            URL url = new URL(str_url);
+            URL url = new URL(str_url + data);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(5000);
             if (current_mode == MODE_GET) {
